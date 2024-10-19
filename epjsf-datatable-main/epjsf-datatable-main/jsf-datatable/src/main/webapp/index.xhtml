@@ -1,0 +1,25 @@
+<html xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+ <head>
+    <title>JSF Data Table Demo</title>
+ </head>
+ <body>
+    <h3>Student Details</h3>
+    <h:form>
+      <h:dataTable value="#{studentdata.list}" var="row">
+        <h:column>
+          <f:facet name="header">Student Id</f:facet>
+          #{row.studentid}
+        </h:column>
+        <h:column>
+          <f:facet name="header">Student Name</f:facet>
+          #{row.name}
+        </h:column>
+        <h:column>
+          <f:facet name="header">CGPA</f:facet>
+          #{row.cgpa}
+        </h:column>
+      </h:dataTable> <!-- Properly closed the h:dataTable tag -->
+    </h:form>
+ </body>
+</html>
